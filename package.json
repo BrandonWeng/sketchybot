@@ -1,0 +1,27 @@
+{
+  "name": "twitbot",
+  "version": "1.0.0",
+  "description": "Twitter Bot",
+  "main": "bot.js",
+  "scripts": {
+    "start":"node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonWeng/twitbot.git"
+  },
+  "keywords": [
+    "twitter",
+    "bot"
+  ],
+  "author": "Brandon Weng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonWeng/twitbot/issues"
+  },
+  "homepage": "https://github.com/BrandonWeng/twitbot#readme",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
