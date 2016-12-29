@@ -13,6 +13,7 @@ function tweetRandomSketchAt(user){
   exec(generateSketchCmd,processing);
 
   function processing(){
+    console.log("Generating and Tweeting Sketch...");
     var fileName = 'randomSketch/output.png';
     var params = {
       encoding: 'base64'
@@ -25,7 +26,7 @@ function tweetRandomSketchAt(user){
     function uploaded(err,data,response){
       var id = data.media_id_string;
       var tweet = {
-        status: (user+', here is your Sketch'),
+        status: ('.@'+user+', here you go :)'),
         media_ids: [id]
       };
 
@@ -44,4 +45,7 @@ function tweetRandomSketchAt(user){
   }
 }
 
-tweetRandomSketchAt('test');
+module.exports = {
+  T:T,
+  tweetRandomSketchAt:tweetRandomSketchAt
+};

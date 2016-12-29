@@ -2,9 +2,9 @@
   "name": "twitbot",
   "version": "1.0.0",
   "description": "Twitter Bot",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "start":"node bot.js",
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
