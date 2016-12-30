@@ -18,6 +18,7 @@ function tweetEvent(eventMsg){
   console.log("An event has occured");
   var tweetedAtThisUser = eventMsg.in_reply_to_screen_name;
   var from = eventMsg.user.screen_name;
+
   if (tweetedAtThisUser === me){
     tweetRandomSketchAt(from);
     ++sketchesGenereated;
