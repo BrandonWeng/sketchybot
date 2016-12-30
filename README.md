@@ -1,7 +1,4 @@
-# twitbot
-npm,node.js
+# twitbot- npm(twit),node.js,processing
 
-Todo:
-  Make dynamic sketches,
-  Seperate bot module from index,
-  host it 
+Twitter bot that genereates a random "sketch" when prompted
+
