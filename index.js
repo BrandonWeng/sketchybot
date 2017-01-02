@@ -19,7 +19,7 @@ function tweetEvent(eventMsg){
   var tweetedAtThisUser = eventMsg.in_reply_to_screen_name;
   var from = eventMsg.user.screen_name;
 
-  if (tweetedAtThisUser === me){
+  if (tweetedAtThisUser == me){
     tweetRandomSketchAt(from);
     ++sketchesGenereated;
   }
@@ -28,7 +28,7 @@ function tweetEvent(eventMsg){
 
 function tweetRandomSketchAt(user){
   console.log("Starting Generation...");
-  var generateSketchCmd = 'processing-java --sketch=\'pwd\'/randomSketch --run';
+  var generateSketchCmd = 'randomSketch/randomSketch';
 
   var exec = require ('child_process').exec;
   exec(generateSketchCmd,processing);
@@ -55,15 +55,14 @@ function tweetRandomSketchAt(user){
 
       T.post('statuses/update',tweet, tweeted);
     }
-  }
 
-
-function tweeted(err, data, response){
-    if (err) {
-      console.log("Tweet failed");
-      console.log(err.message);
-    } else {
-      console.log("Tweeted");
+    function tweeted(err, data, response){
+        if (err) {
+          console.log("Tweet failed");
+          console.log(err.message);
+        } else {
+          console.log("Tweeted");
+        }
+      }
     }
   }
-}
