@@ -49,7 +49,7 @@ function tweetRandomSketchAt(user){
     function uploaded(err,data,response){
       var id = data.media_id_string;
       var tweet = {
-        status: ('.@'+user+', here you go :)'),
+        status: ('.@' + user + ' here you go'),
         media_ids: [id]
       };
 
