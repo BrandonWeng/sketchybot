@@ -1,5 +1,5 @@
 # sketchybot- npm(twit),node.js,processing
-# bot is currently offline...
+# [bot](https://twitter.com/sketchybot) is currently online
 
 [Twitter bot](https://twitter.com/sketchybot) that genereates a random "sketch" when prompted
 
