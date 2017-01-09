@@ -18,15 +18,16 @@ function tweetEvent(eventMsg){
   console.log("An event has occured");
   var tweetedAtThisUser = eventMsg.in_reply_to_screen_name;
   var from = eventMsg.user.screen_name;
+  var nameID = eventMsg.id_str;
 
   if (tweetedAtThisUser == me){
-    tweetRandomSketchAt(from);
+    tweetRandomSketchAt(from,nameID);
     ++sketchesGenereated;
   }
 }
 
 
-function tweetRandomSketchAt(user){
+function tweetRandomSketchAt(user,nameID){
   console.log("Starting Generation...");
   var generateSketchCmd = 'randomSketch/randomSketch';
 
@@ -49,6 +50,7 @@ function tweetRandomSketchAt(user){
     function uploaded(err,data,response){
       var id = data.media_id_string;
       var tweet = {
+        in_reply_to_status_id: nameID,
         status: ('.@' + user + ' here you go'),
         media_ids: [id]
       };
